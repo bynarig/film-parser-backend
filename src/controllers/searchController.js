@@ -12,13 +12,13 @@ class SearchController {
 			const title = req.params.title;
 			const response = await axios.get(apiUrl, {
 				params: {
-					apikey: apiKey, t: title // Pass the movie title as a parameter
+					apikey: apiKey, t: title
 				}
 			});
 
-			res.send(response.data); // Return the data if needed
+			res.send(response.data);
 		} catch (error) {
-			next(error); // Handle the error as per your requirement
+			next(error);
 		}
 	}
 }
