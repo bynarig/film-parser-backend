@@ -12,7 +12,7 @@ class SearchController {
 			const title = req.params.title;
 			const response = await axios.get(apiUrl, {
 				params: {
-					apikey: apiKey, t: title
+					apikey: apiKey, s: title,
 				}
 			});
 
